@@ -250,5 +250,12 @@
       },
       "unggulan": false
     }
-  ]
+  ],
+  "galeri": {
+    "foto1": "/images/uploads/galeri/foto1.svg",
+    "foto2": "/images/uploads/galeri/foto2.svg",
+    "foto3": "/images/uploads/galeri/foto3.svg",
+    "foto4": "/images/uploads/galeri/foto4.svg",
+    "foto5": "/images/uploads/galeri/foto5.svg"
+  }
 }

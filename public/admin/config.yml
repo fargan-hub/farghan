@@ -111,6 +111,16 @@ collections:
                   - {label: "Indonesia", name: "id", widget: "string"}
                   - {label: "English", name: "en", widget: "string"}
 
+          - label: "Galeri (5 Foto Tetap)"
+            name: "galeri"
+            widget: "object"
+            fields:
+              - {label: "Foto 1", name: "foto1", widget: "image"}
+              - {label: "Foto 2", name: "foto2", widget: "image"}
+              - {label: "Foto 3", name: "foto3", widget: "image"}
+              - {label: "Foto 4", name: "foto4", widget: "image"}
+              - {label: "Foto 5", name: "foto5", widget: "image"}
+
           - label: "Kontak"
             name: "kontak"
             widget: "object"
