@@ -9,5 +9,32 @@
 <body>
   <!-- Decap CMS: dimuat dari CDN, tanpa build step -->
   <script src="https://unpkg.com/decap-cms@3/dist/decap-cms.js"></script>
+  <!-- Login pakai username/password (bukan GitHub) → ganti label tombol + sembunyikan ikon GitHub -->
+  <script>
+  (function () {
+    function relabel() {
+      var changed = false;
+      var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      var node;
+      while ((node = walker.nextNode())) {
+        if (node.nodeValue && node.nodeValue.indexOf('Login with GitHub') >= 0) {
+          node.nodeValue = node.nodeValue.replace('Login with GitHub', 'Masuk');
+          changed = true;
+        }
+      }
+      if (changed) {
+        document.querySelectorAll('button svg, a svg').forEach(function (svg) {
+          var host = svg.closest('button, a');
+          if (host && host.textContent.indexOf('Masuk') >= 0) { svg.style.display = 'none'; }
+        });
+      }
+      return changed;
+    }
+    var tries = 0;
+    var t = setInterval(function () {
+      if (relabel() || ++tries > 60) { clearInterval(t); }
+    }, 250);
+  })();
+  </script>
 </body>
 </html>
