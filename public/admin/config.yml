@@ -1,5 +1,5 @@
 # Decap CMS config — Farghan Digital Marketing
-# Konten yang bisa diedit klien: hero, layanan, kontak (bilingual ID/EN).
+# Konten yang bisa diedit klien: hero, layanan, harga, kontak (bilingual ID/EN).
 
 backend:
   name: github
@@ -71,6 +71,45 @@ collections:
                 fields:
                   - {label: "Indonesia", name: "id", widget: "text"}
                   - {label: "English", name: "en", widget: "text"}
+
+          - label: "Harga (Paket)"
+            name: "harga"
+            widget: "list"
+            fields:
+              - label: "Level"
+                name: "level"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Nama Paket"
+                name: "nama"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - {label: "Harga Lama (coret)", name: "harga_lama", widget: "string", required: false}
+              - {label: "Harga", name: "harga", widget: "string"}
+              - label: "Satuan (mis. / sekali)"
+                name: "satuan"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - {label: "Paket Unggulan (badge PALING LARIS)", name: "unggulan", widget: "boolean", default: false}
+              - label: "Teks Tombol"
+                name: "tombol"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - {label: "Link Tombol", name: "link", widget: "string"}
+              - label: "Daftar Fitur"
+                name: "fitur"
+                widget: "list"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
 
           - label: "Kontak"
             name: "kontak"

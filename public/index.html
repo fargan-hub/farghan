@@ -231,6 +231,9 @@ footer{border-top:1px solid var(--line);padding:38px 20px;text-align:center}
 .f-contact a:hover{color:var(--green)}
 .f-contact svg{width:16px;height:16px;fill:currentColor;vertical-align:-3px;margin-right:5px}
 footer .copy{color:var(--dim);font-size:12px}
+footer .admin-login{margin-top:16px}
+footer .admin-login a{color:var(--dim);font-size:12.5px;text-decoration:none;border:1px solid var(--line2);border-radius:100px;padding:7px 16px;display:inline-block;transition:.15s;font-weight:600}
+footer .admin-login a:hover{color:var(--green);border-color:var(--green)}
 
 .float-wa{position:fixed;bottom:16px;right:16px;z-index:100;background:#25d366;color:#fff;font-weight:700;font-size:14px;padding:13px 18px;border-radius:30px;display:flex;align-items:center;gap:8px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.4);animation:pulse 2.2s infinite}
 .float-wa svg{width:22px;height:22px;fill:#fff}
@@ -491,7 +494,7 @@ footer .copy{color:var(--dim);font-size:12px}
   <div class="kicker reveal" data-en="Packages & Pricing">Paket & Harga</div>
   <h2 class="reveal" data-en="Friendly <span class='hl'>Pricing</span>">Harga <span class="hl">Bersahabat</span></h2>
   <p class="lead reveal" style="margin-bottom:26px" data-en="Honest pricing, no hidden fees.">Harga jujur, tanpa biaya tersembunyi.</p>
-  <div class="price">
+  <div class="price" id="hargaGrid">
     <div class="pcard reveal">
       <div class="lv" data-en="Tier 1">Tingkat 1</div>
       <h3 data-en="SME & Personal">UMKM & Personal</h3>
@@ -651,6 +654,7 @@ footer .copy{color:var(--dim);font-size:12px}
     <a id="f-email" href="mailto:alfargan03@gmail.com">📧 alfargan03@gmail.com</a>
   </div>
   <div class="copy" data-en="© 2026 Farghan Digital Marketing — Turnkey website marketing service.">© 2026 Farghan Digital Marketing — Jasa website marketing terima beres.</div>
+  <div class="admin-login"><a href="/admin/">✎ Login Admin</a></div>
 </footer>
 
 <a class="float-wa" href="https://wa.me/6281295175618?text=Halo%2C%20saya%20mau%20konsultasi%20website" target="_blank" rel="noopener">
@@ -779,6 +783,28 @@ footer .copy{color:var(--dim);font-size:12px}
         }).join('');
         if('IntersectionObserver' in window){ grid.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); }); }
         else { grid.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
+      }
+      // HARGA
+      var hargaGrid = document.getElementById('hargaGrid');
+      if(hargaGrid && cms.harga){
+        hargaGrid.innerHTML = cms.harga.map(function(t){
+          var cls = t.unggulan ? 'pcard feat reveal' : 'pcard reveal';
+          var btnCls = t.unggulan ? 'btn-p' : 'btn-g';
+          var feats = (t.fitur || []).map(function(f){
+            return '<li data-en="' + escAttr(f.en) + '">' + f.id + '</li>';
+          }).join('');
+          var old = t.harga_lama ? '<div class="pr-old">' + escAttr(t.harga_lama) + '</div>' : '';
+          var sat = (t.satuan && t.satuan.id) ? ' <small data-en="' + escAttr(t.satuan.en) + '">' + t.satuan.id + '</small>' : '';
+          return '<div class="' + cls + '">' +
+            '<div class="lv" data-en="' + escAttr(t.level.en) + '">' + t.level.id + '</div>' +
+            '<h3 data-en="' + escAttr(t.nama.en) + '">' + t.nama.id + '</h3>' +
+            old + '<div class="pr">' + escAttr(t.harga) + sat + '</div>' +
+            '<ul>' + feats + '</ul>' +
+            '<a class="btn ' + btnCls + '" href="' + escAttr(t.link) + '" data-en="' + escAttr(t.tombol.en) + '">' + t.tombol.id + '</a>' +
+          '</div>';
+        }).join('');
+        if('IntersectionObserver' in window){ hargaGrid.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); }); }
+        else { hargaGrid.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
       }
       // KONTAK
       applyCms(document.querySelector('[data-cms="kontak.heading"]'), cms.kontak && cms.kontak.heading);
