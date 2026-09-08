@@ -1,0 +1,100 @@
+# Decap CMS config — Farghan Digital Marketing
+# Konten yang bisa diedit klien: hero, layanan, kontak (bilingual ID/EN).
+
+backend:
+  name: github
+  repo: fargan-hub/farghan
+  branch: main
+  base_url: https://cms-demo.lokersprasan.workers.dev
+  auth_endpoint: api/auth
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "konten"
+    label: "Konten Situs"
+    files:
+      - name: "site"
+        label: "Konten Utama"
+        file: "content/site.json"
+        fields:
+          - label: "Hero (Bagian Atas)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Label Atas"
+                name: "kicker"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Sub-judul"
+                name: "sub"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "text"}
+                  - {label: "English", name: "en", widget: "text"}
+              - label: "Tombol 1"
+                name: "cta1"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Tombol 2"
+                name: "cta2"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Poin Kepercayaan"
+                name: "trust"
+                widget: "list"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+
+          - label: "Layanan (Keunggulan)"
+            name: "layanan"
+            widget: "list"
+            fields:
+              - {label: "Ikon (emoji)", name: "icon", widget: "string"}
+              - label: "Judul"
+                name: "judul"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Deskripsi"
+                name: "desc"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "text"}
+                  - {label: "English", name: "en", widget: "text"}
+
+          - label: "Kontak"
+            name: "kontak"
+            widget: "object"
+            fields:
+              - label: "Judul"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - label: "Sub-judul"
+                name: "sub"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "text"}
+                  - {label: "English", name: "en", widget: "text"}
+              - label: "Tombol WhatsApp"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: "Indonesia", name: "id", widget: "string"}
+                  - {label: "English", name: "en", widget: "string"}
+              - {label: "Nomor WhatsApp (tampil)", name: "whatsapp", widget: "string"}
+              - {label: "Nomor WhatsApp (link)", name: "whatsapp_link", widget: "string", hint: "Format: 6281295175618 (tanpa + atau spasi)"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Instagram (username)", name: "instagram", widget: "string"}

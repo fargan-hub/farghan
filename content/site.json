@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "kicker": {
+      "id": "Jasa Website Marketing · Terima Beres",
+      "en": "Website Marketing Service · Turnkey"
+    },
+    "sub": {
+      "id": "Kami racik website yang menarik calon pembeli — bukan sekadar brosur online. <b>Mesin pencari cuan untuk bisnismu</b> — dari yang baru punya ide sampai yang mau naik kelas.",
+      "en": "We craft websites that attract buyers — not just online brochures. <b>A money-making machine for your business</b> — from those just starting out to those ready to level up."
+    },
+    "cta1": {
+      "id": "🔎 Lihat Hasil Kerja",
+      "en": "🔎 See Our Work"
+    },
+    "cta2": {
+      "id": "💬 Konsultasi Gratis",
+      "en": "💬 Free Consultation"
+    },
+    "trust": [
+      { "id": "<b>4 proyek</b> terbukti", "en": "<b>4 projects</b> proven" },
+      { "id": "<b>Riset dulu</b> sebelum garap", "en": "<b>Research first</b>, then build" },
+      { "id": "<b>Data asli</b> & tercatat", "en": "<b>Real data</b> & verifiable" }
+    ]
+  },
+  "layanan": [
+    {
+      "icon": "⚡",
+      "judul": { "id": "Super Cepat", "en": "Super Fast" },
+      "desc": {
+        "id": "Load sekejap dari server global. Pengunjung betah, Google pun suka website ngebut.",
+        "en": "Loads instantly from global servers. Visitors stay, and Google loves fast sites."
+      }
+    },
+    {
+      "icon": "🔒",
+      "judul": { "id": "Aman dari Hacker", "en": "Hacker-Proof" },
+      "desc": {
+        "id": "Tanpa database & plugin rentan. Struktur dibuat agar susah dibobol.",
+        "en": "No database & vulnerable plugins. Built to be hard to breach."
+      }
+    },
+    {
+      "icon": "💰",
+      "judul": { "id": "Tanpa Biaya Tahunan", "en": "No Annual Fees" },
+      "desc": {
+        "id": "Sekali bayar, selesai. Hosting gratis selamanya — tidak ada tagihan diam-diam tiap tahun.",
+        "en": "Pay once, done. Free hosting forever — no hidden annual bills."
+      }
+    },
+    {
+      "icon": "🛠️",
+      "judul": { "id": "Bebas Perawatan", "en": "Zero Maintenance" },
+      "desc": {
+        "id": "Tidak perlu update atau takut error mendadak. Website tetap jalan tanpa harus diurus.",
+        "en": "No updates or unexpected errors. Your site keeps running without attention."
+      }
+    },
+    {
+      "icon": "🎨",
+      "judul": { "id": "Desain Custom", "en": "Custom Design" },
+      "desc": {
+        "id": "Dibuat khusus sesuai brand & kebutuhan bisnismu — bukan template pasaran.",
+        "en": "Made specifically for your brand — not a generic template."
+      }
+    },
+    {
+      "icon": "📈",
+      "judul": { "id": "Tahan Ramai", "en": "Handles Traffic" },
+      "desc": {
+        "id": "Tidak down walau dikunjungi banyak orang. Siap saat bisnismu lagi naik.",
+        "en": "Won't go down under heavy traffic. Ready when your business grows."
+      }
+    }
+  ],
+  "kontak": {
+    "heading": {
+      "id": "Siap Bikin Mesin Cuan Kamu Sendiri?",
+      "en": "Ready to Build Your Own Money-Making Machine?"
+    },
+    "sub": {
+      "id": "Konsultasi gratis — ceritakan bisnismu, kami racik solusinya.",
+      "en": "Free consultation — tell us about your business, we'll craft the solution."
+    },
+    "cta": {
+      "id": "💬 Konsultasi Gratis via WhatsApp",
+      "en": "💬 Free Consultation via WhatsApp"
+    },
+    "whatsapp": "0812 9517 5618",
+    "whatsapp_link": "6281295175618",
+    "email": "alfargan03@gmail.com",
+    "instagram": "farghan_digital_marketing"
+  }
+}
