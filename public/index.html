@@ -763,6 +763,7 @@ footer .admin-login a:hover{color:var(--green);border-color:var(--green)}
   // ── CMS CONTENT (dari GitHub, bisa diedit via Decap CMS di /admin/) ──
   var CMS_JSON = 'https://raw.githubusercontent.com/fargan-hub/farghan/main/content/site.json';
   function escAttr(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+  function imgUrl(p){ if(!p) return ''; if(/^https?:\/\//.test(p)) return p; return 'https://raw.githubusercontent.com/fargan-hub/farghan/main/public' + (p.charAt(0)==='/'?p:'/'+p); }
   function applyCms(el, obj){
     if(!el || !obj) return;
     el.innerHTML = obj.id;
@@ -823,7 +824,7 @@ footer .admin-login a:hover{color:var(--green);border-color:var(--green)}
       if(galeriGrid && cms.galeri){
         var imgs = ['foto1','foto2','foto3','foto4','foto5'].map(function(k){ return cms.galeri[k]; });
         galeriGrid.innerHTML = imgs.map(function(src){
-          return src ? '<div class="gimg reveal"><img src="' + escAttr(src) + '" alt="Galeri" loading="lazy"></div>' : '';
+          return src ? '<div class="gimg reveal"><img src="' + escAttr(imgUrl(src)) + '" alt="Galeri" loading="lazy"></div>' : '';
         }).join('');
         if('IntersectionObserver' in window){ galeriGrid.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); }); }
         else { galeriGrid.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
