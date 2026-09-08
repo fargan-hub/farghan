@@ -17,15 +17,27 @@
       "en": "💬 Free Consultation"
     },
     "trust": [
-      { "id": "<b>4 proyek</b> terbukti", "en": "<b>4 projects</b> proven" },
-      { "id": "<b>Riset dulu</b> sebelum garap", "en": "<b>Research first</b>, then build" },
-      { "id": "<b>Data asli</b> & tercatat", "en": "<b>Real data</b> & verifiable" }
+      {
+        "id": "<b>4 proyek</b> terbukti",
+        "en": "<b>4 projects</b> proven"
+      },
+      {
+        "id": "<b>Riset dulu</b> sebelum garap",
+        "en": "<b>Research first</b>, then build"
+      },
+      {
+        "id": "<b>Data asli</b> & tercatat",
+        "en": "<b>Real data</b> & verifiable"
+      }
     ]
   },
   "layanan": [
     {
       "icon": "⚡",
-      "judul": { "id": "Super Cepat", "en": "Super Fast" },
+      "judul": {
+        "id": "Super Cepat",
+        "en": "Super Fast"
+      },
       "desc": {
         "id": "Load sekejap dari server global. Pengunjung betah, Google pun suka website ngebut.",
         "en": "Loads instantly from global servers. Visitors stay, and Google loves fast sites."
@@ -33,7 +45,10 @@
     },
     {
       "icon": "🔒",
-      "judul": { "id": "Aman dari Hacker", "en": "Hacker-Proof" },
+      "judul": {
+        "id": "Aman dari Hacker",
+        "en": "Hacker-Proof"
+      },
       "desc": {
         "id": "Tanpa database & plugin rentan. Struktur dibuat agar susah dibobol.",
         "en": "No database & vulnerable plugins. Built to be hard to breach."
@@ -41,7 +56,10 @@
     },
     {
       "icon": "💰",
-      "judul": { "id": "Tanpa Biaya Tahunan", "en": "No Annual Fees" },
+      "judul": {
+        "id": "Tanpa Biaya Tahunan",
+        "en": "No Annual Fees"
+      },
       "desc": {
         "id": "Sekali bayar, selesai. Hosting gratis selamanya — tidak ada tagihan diam-diam tiap tahun.",
         "en": "Pay once, done. Free hosting forever — no hidden annual bills."
@@ -49,7 +67,10 @@
     },
     {
       "icon": "🛠️",
-      "judul": { "id": "Bebas Perawatan", "en": "Zero Maintenance" },
+      "judul": {
+        "id": "Bebas Perawatan",
+        "en": "Zero Maintenance"
+      },
       "desc": {
         "id": "Tidak perlu update atau takut error mendadak. Website tetap jalan tanpa harus diurus.",
         "en": "No updates or unexpected errors. Your site keeps running without attention."
@@ -57,7 +78,10 @@
     },
     {
       "icon": "🎨",
-      "judul": { "id": "Desain Custom", "en": "Custom Design" },
+      "judul": {
+        "id": "Desain Custom",
+        "en": "Custom Design"
+      },
       "desc": {
         "id": "Dibuat khusus sesuai brand & kebutuhan bisnismu — bukan template pasaran.",
         "en": "Made specifically for your brand — not a generic template."
@@ -65,7 +89,10 @@
     },
     {
       "icon": "📈",
-      "judul": { "id": "Tahan Ramai", "en": "Handles Traffic" },
+      "judul": {
+        "id": "Tahan Ramai",
+        "en": "Handles Traffic"
+      },
       "desc": {
         "id": "Tidak down walau dikunjungi banyak orang. Siap saat bisnismu lagi naik.",
         "en": "Won't go down under heavy traffic. Ready when your business grows."
@@ -85,7 +112,7 @@
       "id": "💬 Konsultasi Gratis via WhatsApp",
       "en": "💬 Free Consultation via WhatsApp"
     },
-    "whatsapp": "0812 9517 5618",
+    "whatsapp": "0812 9517 5618 / 0819 0405 3354",
     "whatsapp_link": "6281295175618",
     "email": "alfargan03@gmail.com",
     "instagram": "farghan_digital_marketing"
